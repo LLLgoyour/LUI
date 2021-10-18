@@ -1,3 +1,3 @@
 import Button from '../src/button.vue'
 
-describe('Button.vue',)
+describe('Button.vue')
