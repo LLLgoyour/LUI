@@ -8,13 +8,16 @@
     "lint": "vue-cli-service lint",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "test": "jest"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-plugin-eslint": "^4.5.14",
     "@vue/cli-service": "^3.12.1",
@@ -22,6 +25,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^8.0.1",
     "eslint-plugin-vue": "^7.0.0",
+    "jest": "^27.3.0",
     "sass-embedded": "^1.0.0-beta.4",
     "vitepress": "^0.20.0"
   },
@@ -43,5 +47,24 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "UI framework based on Microsoft Fluent UI",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLLgoyour/LUI.git"
+  },
+  "keywords": [
+    "UI"
+  ],
+  "author": "LLLgoyour",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LLLgoyour/LUI/issues"
+  },
+  "homepage": "https://github.com/LLLgoyour/LUI#readme"
 }
