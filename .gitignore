@@ -1,1 +1,28 @@
+# Package Manager
 node_modules
+
+# System
+.DS_Store
+
+# Editor Related
+.idea
+
+# Bundle
+.jest_coverage
+coverage
+
+# Local Env Files
+*.local
+
+# npm cache
+.npm
+
+# yarn integrity
+.yarn-integrity
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
