@@ -11,7 +11,7 @@
                 'is-round': buttonRound,
                 'is-circle': buttonCircle,
             },
-        ]"
+            ]"
         :disabled="buttonDisabled || buttonLoading"
         :autofocu="autofocus"
         :type="buttonType"
