@@ -1,7 +1,12 @@
 # LUI
 UI framework based on Microsoft Fluent UI
 
-## TODO
+## GOALS
+- 轻量化
+- 适配性强
+- 设计规范（..?）
+
+## PROJECT TODO
 - [ ] 自定义文档目录结构
 - [ ] 通过 MD 来展示组件 demo
 - [x] 集成 Jest
@@ -11,3 +16,4 @@ UI framework based on Microsoft Fluent UI
 - [ ] 颜色主题自定义
 - [ ] 国际化多语言
 - [ ] JavaScript 和 TypeScript 混合开发
+- [ ] Determine UI style/standard (..?)
