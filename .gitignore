@@ -3,6 +3,7 @@
 
 # System
 .DS_Store
+.history
 
 # Editor Related
 .idea
