@@ -1,0 +1,108 @@
+.lui-tag-list {
+  list-style: none;
+  margin: 0.48rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.lui-tag-list li {
+  margin: 0;
+  display: inline-flex;
+}
+
+.lui-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--lui-radius-pill);
+  text-decoration: none;
+}
+
+.lui-tag-chip--default {
+  color: color-mix(in oklab, hsl(var(--lui-tag-h) 60% 24%) 86%, var(--main-color));
+  font-size: 0.83rem;
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  border: 1px solid color-mix(in oklab, hsl(var(--lui-tag-h) 66% 56%) 52%, var(--line-color));
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, hsl(var(--lui-tag-h) 88% 95%) 78%, var(--main-bg-color)),
+      color-mix(in oklab, hsl(var(--lui-tag-h) 82% 90%) 62%, var(--surface-elevated))
+    );
+  padding: 0.21rem 0.63rem;
+  box-shadow: inset 0 1px 0 color-mix(in oklab, #fff 60%, transparent);
+}
+
+.lui-tag-chip--default:hover,
+.lui-tag-chip--default:focus-visible {
+  color: color-mix(in oklab, hsl(var(--lui-tag-h) 68% 26%) 95%, var(--main-color));
+  border-color: color-mix(in oklab, hsl(var(--lui-tag-h) 70% 45%) 70%, var(--line-color));
+  filter: saturate(1.04);
+}
+
+:root.dark .lui-tag-chip--default {
+  color: color-mix(in oklab, hsl(var(--lui-tag-h) 80% 88%) 72%, var(--main-color));
+  border-color: color-mix(in oklab, hsl(var(--lui-tag-h) 74% 52%) 40%, var(--line-color));
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, hsl(var(--lui-tag-h) 38% 28%) 56%, var(--main-bg-color)),
+      color-mix(in oklab, hsl(var(--lui-tag-h) 44% 30%) 48%, var(--surface-elevated))
+    );
+  box-shadow: none;
+}
+
+.lui-tag-list--muted {
+  gap: 0.4rem;
+}
+
+.lui-tag-chip--muted {
+  position: relative;
+  border-radius: var(--lui-radius-sm);
+  line-height: 1.2;
+  font-size: 0.8rem;
+  font-weight: 520;
+  letter-spacing: 0.01em;
+  color: color-mix(in oklab, var(--main-color) 82%, var(--gray-color));
+  border: 1px solid color-mix(in oklab, var(--line-color) 88%, transparent);
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 58% 56%) 10%, var(--surface-elevated));
+  padding: 0.24rem 0.58rem 0.24rem 0.72rem;
+}
+
+.lui-tag-chip--muted::before {
+  content: "";
+  position: absolute;
+  left: 0.36rem;
+  top: 0.24rem;
+  bottom: 0.24rem;
+  width: 2px;
+  border-radius: var(--lui-radius-pill);
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 64% 50%) 42%, var(--line-color));
+}
+
+.lui-tag-chip--muted:hover,
+.lui-tag-chip--muted:focus-visible {
+  color: color-mix(in oklab, hsl(var(--lui-tag-h) 46% 44%) 28%, var(--main-color));
+  border-color: color-mix(in oklab, hsl(var(--lui-tag-h) 62% 48%) 28%, var(--line-color));
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 58% 56%) 14%, var(--surface-elevated));
+}
+
+:root.dark .lui-tag-chip--muted {
+  color: color-mix(in oklab, var(--main-color) 84%, var(--gray-color));
+  border-color: color-mix(in oklab, var(--line-color) 90%, transparent);
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 56% 48%) 12%, var(--surface-elevated));
+}
+
+:root.dark .lui-tag-chip--muted::before {
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 62% 62%) 38%, var(--line-color));
+}
+
+:root.dark .lui-tag-chip--muted:hover,
+:root.dark .lui-tag-chip--muted:focus-visible {
+  color: color-mix(in oklab, hsl(var(--lui-tag-h) 64% 82%) 20%, var(--main-color));
+  border-color: color-mix(in oklab, hsl(var(--lui-tag-h) 58% 64%) 30%, var(--line-color));
+  background: color-mix(in oklab, hsl(var(--lui-tag-h) 56% 48%) 16%, var(--surface-elevated));
+}

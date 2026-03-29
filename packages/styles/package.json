@@ -1,0 +1,22 @@
+{
+  "name": "@lllgoyour/lui-styles",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "base.css",
+    "prose.css",
+    "layout.css",
+    "surface.css",
+    "navigation.css",
+    "tags.css"
+  ],
+  "exports": {
+    "./base.css": "./base.css",
+    "./prose.css": "./prose.css",
+    "./layout.css": "./layout.css",
+    "./surface.css": "./surface.css",
+    "./navigation.css": "./navigation.css",
+    "./tags.css": "./tags.css"
+  },
+  "sideEffects": ["*.css"]
+}

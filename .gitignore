@@ -1,28 +1,32 @@
-# Package Manager
-
-
 # System
 .DS_Store
 
-# Editor Related
+# Editor
 .idea
+.history
+.vscode
 
-# Bundle
-.jest_coverage
+# Dependencies
+node_modules
+.pnpm-store
+
+# Builds and caches
+dist
 coverage
+.jest_coverage
+.vite
+.vitepress/cache
+.vitepress/dist
+.astro
+*.tsbuildinfo
 
-# Local Env Files
+# Local environment
 *.local
-
-# npm cache
-.npm
-
-# yarn integrity
-.yarn-integrity
 
 # Logs
 logs
 *.log
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*

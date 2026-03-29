@@ -1,46 +1,37 @@
-name: Coverage Workflow
+name: Workspace CI
 
 on:
-  # Triggers the workflow on push or pull request events but only for the Version-0 branch
   push:
-    branches: [ Version-0 ]
   pull_request:
-    branches: [ Version-0 ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  verify:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
         with:
-          fetch-depth: 2
-      
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          
+          node-version: 20
+          cache: pnpm
+
       - name: Install dependencies
-        run: npm install
-        
-      - name: Run the tests
-        run: npm test -- --coverage
-      # Codecov
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.0.2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        run: pnpm install
+
+      - name: Type check Vue package
+        run: pnpm typecheck
+
+      - name: Run Vue package tests
+        run: pnpm test
+
+      - name: Build packages and docs
+        run: pnpm build

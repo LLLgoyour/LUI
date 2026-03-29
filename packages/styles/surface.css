@@ -1,0 +1,44 @@
+.lui-surface {
+  position: relative;
+  border: 1px solid color-mix(in oklab, var(--line-color) 85%, transparent);
+  border-radius: var(--lui-radius-md);
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in oklab, var(--surface-elevated) 88%, var(--main-bg-color)),
+      var(--main-bg-color)
+    );
+}
+
+.lui-surface--intro {
+  display: grid;
+  gap: 1rem;
+  padding: 1.2rem 1.1rem;
+}
+
+.lui-surface--pane {
+  padding: 1rem;
+}
+
+.lui-surface--muted {
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in oklab, var(--surface-elevated) 84%, var(--main-bg-color)),
+      color-mix(in oklab, var(--surface-elevated) 92%, var(--main-bg-color))
+    );
+}
+
+.lui-surface :where(h1, h2, h3) {
+  margin-top: 0;
+}
+
+.lui-surface :where(p:last-child) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .lui-surface--intro {
+    padding: 1rem;
+  }
+}

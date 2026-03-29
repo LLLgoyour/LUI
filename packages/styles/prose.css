@@ -1,0 +1,23 @@
+.lui-prose,
+.prose {
+  max-width: min(56rem, calc(100% - 2em));
+  margin: auto;
+  color: var(--main-color);
+  padding: 1em;
+}
+
+.lui-prose p,
+.prose p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.lui-prose .outline,
+.prose .outline {
+  text-align: left;
+}
+
+.lui-prose .outline-item,
+.prose .outline-item {
+  line-height: 1.8889;
+}

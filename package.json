@@ -2,76 +2,20 @@
   "name": "lui",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "description": "Vue-first UI system and Astro-facing design layer for LLLgoyour sites.",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "build": "pnpm -r --if-present build && pnpm docs:build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "test": "jest"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "docs:preview": "vitepress preview docs",
+    "test": "pnpm --filter @lllgoyour/lui-vue test",
+    "typecheck": "pnpm --filter @lllgoyour/lui-vue typecheck"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.1",
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-service": "^3.12.1",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.0.1",
-    "eslint-plugin-vue": "^7.0.0",
-    "gulp": "^4.0.2",
-    "gulp-ruby-sass": "^4.0.0",
-    "jest": "^27.3.0",
-    "sass-embedded": "^1.0.0-beta.4",
-    "ts-jest": "^27.0.5",
-    "tslib": "^2.3.1",
-    "typescript": "^4.4.4",
-    "vitepress": "^0.20.0"
+    "typescript": "^5.6.3",
+    "vitepress": "^1.6.3"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "description": "UI framework based on Microsoft Fluent UI",
-  "main": "babel.config.js",
-  "directories": {
-    "doc": "docs",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LLLgoyour/LUI.git"
-  },
-  "keywords": [
-    "UI"
-  ],
   "author": "LLLgoyour",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LLLgoyour/LUI/issues"
-  },
-  "homepage": "https://github.com/LLLgoyour/LUI#readme"
+  "license": "MIT"
 }

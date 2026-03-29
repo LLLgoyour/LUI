@@ -1,0 +1,19 @@
+{
+  "name": "@lllgoyour/lui-astro",
+  "version": "0.1.0",
+  "type": "module",
+  "peerDependencies": {
+    "astro": "^5.0.0"
+  },
+  "files": ["src"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./components/SiteShell.astro": "./src/components/SiteShell.astro",
+    "./components/HeaderNav.astro": "./src/components/HeaderNav.astro",
+    "./components/FooterBar.astro": "./src/components/FooterBar.astro",
+    "./components/IntroSurface.astro": "./src/components/IntroSurface.astro",
+    "./components/TagChip.astro": "./src/components/TagChip.astro",
+    "./components/TagList.astro": "./src/components/TagList.astro",
+    "./utils/tag": "./src/utils/tag.ts"
+  }
+}

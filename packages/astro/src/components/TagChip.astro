@@ -1,0 +1,40 @@
+---
+import { getTagStyle } from "../utils/tag";
+
+interface Props {
+  label: string;
+  href?: string;
+  variant?: "default" | "muted";
+  prefix?: string;
+  class?: string;
+}
+
+const {
+  label,
+  href,
+  variant = "default",
+  prefix = "#",
+  class: className,
+} = Astro.props;
+
+const style = getTagStyle(label);
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      class:list={["lui-tag-chip", `lui-tag-chip--${variant}`, className]}
+      style={style}
+    >
+      <slot>{`${prefix}${label}`}</slot>
+    </a>
+  ) : (
+    <span
+      class:list={["lui-tag-chip", `lui-tag-chip--${variant}`, className]}
+      style={style}
+    >
+      <slot>{`${prefix}${label}`}</slot>
+    </span>
+  )
+}

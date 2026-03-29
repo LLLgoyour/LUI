@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light;
+
+  --lui-font-family-base: "Inter Variable", "Inter", "Noto Sans SC",
+    "PingFang SC", "Microsoft Yahei", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --lui-font-family-display: "Libertinus Serif", "Source Han Serif SC",
+    "Iowan Old Style", "Times New Roman", serif;
+  --lui-font-family-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --lui-space-1: 0.25rem;
+  --lui-space-2: 0.5rem;
+  --lui-space-3: 0.75rem;
+  --lui-space-4: 1rem;
+  --lui-space-5: 1.5rem;
+  --lui-space-6: 2rem;
+  --lui-space-7: 2.5rem;
+
+  --lui-radius-sm: 8px;
+  --lui-radius-md: 12px;
+  --lui-radius-lg: 18px;
+  --lui-radius-pill: 999px;
+
+  --lui-motion-fast: 120ms ease;
+  --lui-motion-medium: 180ms ease;
+
+  --lui-color-text: #211915;
+  --lui-color-text-strong: #140f0d;
+  --lui-color-text-hover: #3b2f28;
+  --lui-color-text-muted: #6f635a;
+  --lui-color-background: #faf7f2;
+  --lui-color-background-nav: #faf7f2f0;
+  --lui-color-background-raw: #f0e6de;
+  --lui-color-surface: #fffaf5;
+  --lui-color-surface-emphasis: #f7efe7;
+  --lui-color-accent: #bd4b5f;
+  --lui-color-accent-strong: #a33a4d;
+  --lui-color-line: #dfd2c5;
+
+  --lui-shadow-soft: inset 0 1px 0 color-mix(in oklab, #fff 60%, transparent),
+    0 14px 30px -24px color-mix(in oklab, var(--lui-color-text-strong) 28%, transparent);
+
+  --vp-font-family-base: var(--lui-font-family-base);
+  --vp-font-family-display: var(--lui-font-family-display);
+  --vp-font-family-mono: var(--lui-font-family-mono);
+
+  --main-color: var(--lui-color-text);
+  --main-hover-color: var(--lui-color-text-hover);
+  --raw-bg-color: var(--lui-color-background-raw);
+  --main-bg-color: var(--lui-color-background);
+  --nav-bg-color: var(--lui-color-background-nav);
+  --gray-color: var(--lui-color-text-muted);
+  --accent: var(--lui-color-accent);
+  --accent-dark: var(--lui-color-accent-strong);
+  --black: var(--lui-color-text-strong);
+  --line-color: var(--lui-color-line);
+  --surface-elevated: var(--lui-color-surface);
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  --lui-color-text: #eae2da;
+  --lui-color-text-strong: #f2ebe4;
+  --lui-color-text-hover: #f2ebe4;
+  --lui-color-text-muted: #c2b6ae;
+  --lui-color-background: #15110f;
+  --lui-color-background-nav: #15110fee;
+  --lui-color-background-raw: #241c17;
+  --lui-color-surface: #1d1713;
+  --lui-color-surface-emphasis: #241d18;
+  --lui-color-accent: #d85a4a;
+  --lui-color-accent-strong: #e57a6b;
+  --lui-color-line: #332922;
+
+  --lui-shadow-soft: none;
+}

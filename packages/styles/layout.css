@@ -1,0 +1,76 @@
+.lui-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lui-main {
+  flex: 1 0 auto;
+  width: calc(100% - 2em);
+  max-width: min(64rem, calc(100% - 2em));
+  margin: 0 auto;
+}
+
+.lui-flow {
+  display: grid;
+  gap: 2rem;
+}
+
+.lui-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.lui-post-list__item {
+  margin-top: 0;
+  padding: 0.7rem 0 0.45rem 1rem;
+}
+
+.lui-post-list__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.lui-post-list__title {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-family: var(--lui-font-family-display);
+  color: var(--main-color);
+}
+
+.lui-post-list__heading:hover .lui-post-list__title,
+.lui-post-list__heading:focus-visible .lui-post-list__title {
+  color: var(--accent);
+}
+
+.lui-post-list__date {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--gray-color);
+  white-space: nowrap;
+}
+
+.lui-post-list__summary {
+  margin: 0.38rem 0 0;
+  color: var(--gray-color);
+}
+
+@media (max-width: 640px) {
+  .lui-post-list__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .lui-post-list__date {
+    white-space: normal;
+  }
+}

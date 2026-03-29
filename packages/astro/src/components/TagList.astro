@@ -1,0 +1,33 @@
+---
+import TagChip from "./TagChip.astro";
+
+interface Props {
+  tags: string[];
+  hrefBase?: string;
+  variant?: "default" | "muted";
+  prefix?: string;
+  ariaLabel?: string;
+  class?: string;
+}
+
+const {
+  tags,
+  hrefBase,
+  variant = "default",
+  prefix = "#",
+  ariaLabel = "Tags",
+  class: className,
+} = Astro.props;
+
+const buildHref = (tag: string) => (hrefBase ? `${hrefBase}${encodeURIComponent(tag)}` : undefined);
+---
+
+<ul class:list={["lui-tag-list", `lui-tag-list--${variant}`, className]} aria-label={ariaLabel}>
+  {
+    tags.map((tag) => (
+      <li>
+        <TagChip label={tag} href={buildHref(tag)} variant={variant} prefix={prefix} />
+      </li>
+    ))
+  }
+</ul>

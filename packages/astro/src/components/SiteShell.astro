@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+  mainClass?: string;
+  mainId?: string;
+}
+
+const { class: className, mainClass, mainId } = Astro.props;
+---
+
+<div class:list={["lui-page", className]}>
+  <slot name="header" />
+  <main id={mainId} class:list={["lui-main", mainClass]}>
+    <slot />
+  </main>
+  <slot name="footer" />
+</div>

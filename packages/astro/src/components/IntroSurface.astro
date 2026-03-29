@@ -1,0 +1,15 @@
+---
+interface Props {
+  as?: "section" | "article" | "div";
+  id?: string;
+  label?: string;
+  class?: string;
+}
+
+const { as = "section", id, label, class: className } = Astro.props;
+const Tag = as;
+---
+
+<Tag id={id} aria-label={label} class:list={["lui-surface", "lui-surface--intro", className]}>
+  <slot />
+</Tag>

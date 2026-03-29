@@ -1,0 +1,10 @@
+{
+  "name": "@lllgoyour/lui-tokens",
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["theme.css"],
+  "exports": {
+    "./theme.css": "./theme.css"
+  },
+  "sideEffects": ["*.css"]
+}
